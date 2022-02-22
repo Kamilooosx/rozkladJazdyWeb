@@ -1,7 +1,7 @@
 // CONSTS
 
 const text = document.querySelector('.text')
-const bus23p = document.getElementById("bus23p");
+// const bus23p = document.getElementById("bus23p");
 const timetable23p = document.getElementById("bus23pr");
 const bus223 = document.getElementById("bus223");
 const bus223r = document.getElementById("bus223r");
@@ -31,8 +31,8 @@ const pokazRozklad = (rozkl223, rozkl23p, rozkl210, rozkl228) => {
     let newRozkl228 = rozkl228.split(" ").join(" - ");
     bus223.textContent = "223"
     bus223r.textContent = newRozkl223
-    bus23p.textContent = "23P"
-    timetable23p.textContent = newTimetable23p
+    // bus23p.textContent = "23P"
+    // timetable23p.textContent = newTimetable23p
     bus210.textContent = "210"
     bus210r.textContent = timetable210
     bus228.textContent = "228"
@@ -40,11 +40,11 @@ const pokazRozklad = (rozkl223, rozkl23p, rozkl210, rozkl228) => {
     image.style.display = 'none'
     bus210.style.display = 'block'
     bus228.style.display = 'block'
-    bus23p.style.display = 'block'
+    // bus23p.style.display = 'block'
     bus223.style.display = 'block'
     bus210r.style.display = 'block'
     bus228r.style.display = 'block'
-    timetable23p.style.display = 'block'
+    // timetable23p.style.display = 'block'
     bus223r.style.display = 'block'
 }
 
@@ -182,9 +182,9 @@ function jsfunc1() {
     if (one == "val1") {
         if (two == "rze") {
             if (three == "week") {
-                pokazRozklad("00:08 05:00 05:25 05:55 06:50 07:35 08:10 09:00 10:50 13:05 14:20G 15:25 16:45 17:45 19:15 20:30 22:20", "05:55 06:55 08:50 11:00 13:35 15:55", "05:20 07:01 07:59 13:32 16:04 16:51", "")
+                pokazRozklad("00:08 05:00 05:25 05:55 06:50 07:35 08:10 09:00 10:50 13:05 14:20G 15:25 16:45 17:45 19:15 20:30 22:20", "", "05:20 07:01 07:59 13:32 16:04 16:51", "")
             } else if (three == "saturday") {
-                pokazRozklad("00:06 05:55 09:20 11:50 14:35 16:50 19:20 20:30 22:35", "05:55 06:55 08:50 11:00 13:35 15:55", "", "")
+                pokazRozklad("00:06 05:55 09:20 11:50 14:35 16:50 19:20 20:30 22:35", "", "", "")
                 hide210()
             } else if (three == "sunday") {
                 pokazRozklad("00:06mś 06:00 07:00 09:10 11:00 16:10 18:05 20:20", "", "", "")
@@ -207,9 +207,9 @@ function jsfunc1() {
     if (one == "val2") {
         if (two == "rze") {
             if (three == "week") {
-                pokazRozklad("00:09 05:01 05:26 05:56 06:51 07:36 08:11 09:01 10:51 13:06 14:21G 15:26 16:46 17:46 19:16 20:31 22:21", "05:55 06:55 08:50 11:00 13:35 15:55", "05:21 07:02 08:00 13:33 16:05 16:52", "")
+                pokazRozklad("00:09 05:01 05:26 05:56 06:51 07:36 08:11 09:01 10:51 13:06 14:21G 15:26 16:46 17:46 19:16 20:31 22:21", "", "05:21 07:02 08:00 13:33 16:05 16:52", "")
             } else if (three == "saturday") {
-                pokazRozklad("00:07 05:56 09:21 11:51 14:36 16:51 19:21 20:31 22:36", "05:55 06:55 08:50 11:00 13:35 15:55", "", "")
+                pokazRozklad("00:07 05:56 09:21 11:51 14:36 16:51 19:21 20:31 22:36", "", "", "")
                 hide210()
             } else if (three == "sunday") {
                 pokazRozklad("00:07mś 06:01 07:01 09:11 11:01 16:11 18:06 20:21", "", "", "")
@@ -235,9 +235,9 @@ function jsfunc1() {
     if (one == "val3") {
         if (two == "rze") {
             if (three == "week") {
-                pokazRozklad("00:10 05:02 05:27 05:57 06:52 07:37 08:12 09:02 10:52 13:07 14:22G 15:27 16:47 17:47 19:17 20:32 22:22", "05:55 06:55 08:50 11:00 13:35 15:55", "05:22 07:03 08:01 13:34 16:06 16:54", "")
+                pokazRozklad("00:10 05:02 05:27 05:57 06:52 07:37 08:12 09:02 10:52 13:07 14:22G 15:27 16:47 17:47 19:17 20:32 22:22", "", "05:22 07:03 08:01 13:34 16:06 16:54", "")
             } else if (three == "saturday") {
-                pokazRozklad("00:08 05:57 09:22 11:52 14:37 16:52 19:22 20:32 22:37", "05:55 06:55 08:50 11:00 13:35 15:55", "", "")
+                pokazRozklad("00:08 05:57 09:22 11:52 14:37 16:52 19:22 20:32 22:37", "", "", "")
                 hide210()
             } else if (three == "sunday") {
                 pokazRozklad("00:08mś 06:02 07:02 09:12 11:02 16:12 18:07 20:22", "", "", "")
@@ -263,9 +263,9 @@ function jsfunc1() {
     if (one == "val4") {
         if (two == "rze") {
             if (three == "week") {
-                pokazRozklad("00:11 05:03 05:28 05:58 06:53 07:38 08:13 09:03 10:53 13:08 14:23G 15:28 16:48 17:48 19:18 20:33 22:23", "05:55 06:55 08:50 11:00 13:35 15:55", "05:23 07:04 08:02 13:35 16:07 16:55", "")
+                pokazRozklad("00:11 05:03 05:28 05:58 06:53 07:38 08:13 09:03 10:53 13:08 14:23G 15:28 16:48 17:48 19:18 20:33 22:23", "", "05:23 07:04 08:02 13:35 16:07 16:55", "")
             } else if (three == "saturday") {
-                pokazRozklad("00:09 05:58 09:23 11:53 14:38 16:53 19:23 20:33 22:38", "05:55 06:55 08:50 11:00 13:35 15:55", "", "")
+                pokazRozklad("00:09 05:58 09:23 11:53 14:38 16:53 19:23 20:33 22:38", "", "", "")
                 hide210()
             } else if (three == "sunday") {
                 pokazRozklad("00:09mś 06:03 07:03 09:13 11:03 16:13 18:08 20:23", "", "", "")

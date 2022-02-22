@@ -8,13 +8,21 @@
   box-sizing: border-box;
 }
 
+
+
+
 section {
-  font-family: 'Oswald', sans-serif;
-  /* height: 100vh; */
   width: 100vw;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(47%, white));
   background: linear-gradient(180deg, black 0%, white 47%);
+  font-family: 'Oswald', sans-serif;
+}
+section .container{
+  /* height: 100vh; */
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,6 +33,12 @@ section {
   position: relative;
   color: white;
 }
+
+
+@media only screen and (min-width: 1024px) {
+section .container{width: 50vw;}
+}
+
 
 section .selects {
   display: -webkit-box;
