@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>We're offline</title>
+
+    <style>
+        #quotes {
+            padding: 20px;
+            background-color: #eaeaea;
+        }
+
+        #online {
+            display: none;
+            padding: 20px;
+            background-color: #8df4a3;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="online">
+        Sieć znowu działa. <a href="javascript: window.location.reload();"> Wczytaj stronę główną.</a>
+    </div>
+
+    <h1>Jesteś obecnie w trybie offline</h1>
+    <p>Przejrzyj inspirujące cytaty:</p>
+
+    <div id="quotes"></div>
+
+<script src="/offline/js/scripts.js"></script>
+</body>
+</html>
