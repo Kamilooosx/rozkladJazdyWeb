@@ -1,0 +1,353 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-width: 100vw;
+  font-family: 'Oswald', sans-serif;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+section {
+  font-family: 'Oswald', sans-serif;
+  /* height: 100vh; */
+  width: 100vw;
+  overflow: hidden;
+  background: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(47%, white));
+  background: linear-gradient(180deg, black 0%, white 47%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  color: white;
+}
+
+section .selects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+}
+
+section .selects .buttons {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 70%;
+  text-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+section .selects .buttons button {
+  position: relative;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  margin: 0 auto;
+  font-size: 17px;
+  padding: 6px 0;
+  border-radius: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+}
+
+section .selects .buttons button:nth-child(1) {
+  border-radius: 10px 0px 0px 10px;
+}
+
+section .selects .buttons button:nth-child(2) {
+  border-radius: 0px 10px 10px 0px;
+  border-left: white 1px solid;
+}
+
+section .selects .buttons .bg {
+  background-color: green;
+}
+
+section .selects .buttons .fajeczka {
+  right: 6px;
+  position: absolute;
+  display: none;
+  -webkit-animation: heart 0.5s;
+  animation: heart 0.5s;
+}
+
+section .selects .buttons .fajeczka i {
+  font-size: 17px;
+}
+
+section .selects .buttons .faja {
+  display: block;
+}
+
+section .selects .modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%) scale(0);
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: #333;
+  width: 80%;
+  height: 75%;
+}
+
+section .selects .modal.active {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+section .selects .modal-header {
+  padding: 10px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+section .selects .modal-header .title {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+section .selects .modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+}
+
+section .selects .modal-body {
+  padding: 10px 18px;
+  font-size: 19px;
+}
+
+section .selects .modal-body #modal223 {
+  font-size: 27px;
+  font-weight: bold;
+}
+
+section .selects .open-window {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  font-size: 15px;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  z-index: 20;
+  border-radius: 10px 0 0 0;
+
+}
+
+section .selects #overlay {
+  position: fixed;
+  opacity: 0;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+section .selects #overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+section .selects small {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+section .selects select {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  font-size: 17px;
+  padding: 6px 0;
+  border-radius: 10px;
+  background-color: #333;
+  color: white;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+section .selects select option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: white;
+  margin: 0 auto;
+}
+
+section .selects h1#rozkl {
+  font-size: 35px;
+  margin-top: 25px;
+}
+
+section .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* height: 70%; */
+  width: 70%;
+  padding: 10px 0 50px 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  /* -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start; */
+  margin: 0 auto;
+  text-align: center;
+  color: black;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+
+}
+
+section .text h1 {
+  display: none;
+  font-size: 25px;
+  margin-top: 10px;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+  background: green;
+  border-radius: 10px;
+  color: white;
+}
+
+section .text h2 {
+  display: none;
+  margin-top: 5px;
+  font-size: 17px;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+
+/* #bus228r {
+  margin-bottom: 50px;
+} */
+
+section .text .lottie {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin-top: 50px;
+  /* margin-bottom: 50px; */
+}
+
+section .text #data {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+@-webkit-keyframes heart {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes heart {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

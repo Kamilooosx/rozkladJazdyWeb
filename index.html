@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Document</title>
+ <link rel="stylesheet" href="css/style.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="cordova.js"></script>
+</head>
+
+<body>
+<section>
+        <div class="selects">
+            <h1 id="rozkl"> Rozkład Jazdy </h1>
+            <small>Wybierz dzień tygodnia</small>
+            <select id="whatDay" onchange="jsfunc1()" name="wybierz opcje">
+                <option value="week" id="week"> Poniedziałek-Piątek </option>
+                <option value="saturday" id="saturday"> Sobota</option>
+                <option value="sunday" id="sunday"> Niedziela
+            </select>
+                <small>Wybierz kierunek</small>
+        <div class="buttons">
+            <button id="where1" class="btnn" value="nie" >Niechobrz 
+                <div class="fajeczka" id="chosenniechobrz">
+                    <i class="material-icons">
+                        done
+                    </i>
+                </div></i>
+              </button>
+            <button class="btnn" id="where2" value="rze">Rzeszów
+                <div class="fajeczka" id="chosenrzeszow">
+                    <i class="material-icons">
+                        done
+                    </i>      
+                </div>
+            </button>
+            </div>
+    
+            <small>Wybierz przystanek startowy:</small>
+            <select id="przystanek" onChange="jsfunc1()" name="wybierz opcje">
+                <option value="val0" id="valid0"> Wybierz przystanek </option>
+                <option value="val1" id="valid1">Niechobrz Góra Pętla </option>
+                <option value="val2" id="valid2">Niechobrz Krzyż </option>
+                <option value="val3" id="valid3">Niechobrz Góra I </option>
+                <option value="val4" id="valid4">Niechobrz szkoła </option>
+                <option value="val5" id="valid5">Niechobrz Góra </option>
+                <option value="val6" id="valid6">Niechobrz Granice </option>
+                <option value="val7" id="valid7">Niechobrz Ośrodek Zdrowia </option>
+                <option value="val8" id="valid8">Niechobrz Środek </option>
+                <option value="val9" id="valid9">Niechobrz rondo </option>
+                <option value="val10" id="valid10">Niechobrz Stacja Paliw </option>
+                <option value="val11" id="valid11">Niechobrz, Remiza </option>
+                <option value="val12" id="valid12">Niechobrz, Zagrody </option>
+                <option value="val38" id="valid38">Racławówka, Szkoła </option>
+                <option value="val39" id="valid39">Racławówka, Poczta </option>
+                <option value="val40" id="valid40">Racławówka, OSP </option>
+                <option value="val41" id="valid41">Racławówka, Spółdz.Ogrodn </option>
+                <option value="val42" id="valid42">Racławówka, PKS </option>
+                <option value="val13" id="valid13">Racławówka Zagrody I </option>
+                <option value="val14" id="valid14">Racławówka Zagrody II</option>
+                <option value="val15" id="valid15">Boguchwała ul. Techniczna Granica</option>
+                <option value="val16" id="valid16">Boguchwała ul. Techniczna Koreja</option>
+                <option value="val17" id="valid17">Boguchwała ul. Techniczna Zakład Naprawy Samochodów</option>
+                <option value="val18" id="valid18">Boguchwała Kolejowa Stadion 03</option>
+                <option value="val19" id="valid19">Boguchwała ul. Kolejowa Dworzec PKP</option>
+                <option value="val20" id="valid20">Boguchwała / Boguchwała Grunwald</option>
+                <option value="val21" id="valid21">Boguchwała</option>
+                <option value="val43" id="valid43">Rzeszów Beskidzka boisko</option>
+                <option value="val44" id="valid44">Rzeszów Beskidzka pola</option>
+                <option value="val45" id="valid45">Rzeszów Beskidzka trafa</option>
+                <option value="val46" id="valid46">Rzeszów Beskidzka szkoła</option>
+                <option value="val22" id="valid22">Rzeszów Podkarpacka granica 11/12</option>
+                <option value="val23" id="valid23">Rzeszów Podkarpacka 09/10</option>
+                <option value="val24" id="valid24">Rzeszów Podkarpacka kościół 07/08</option>
+                <option value="val25" id="valid25">Rzeszów Podkarpacka/ Wetlińska 05/06</option>
+                <option value="val26" id="valid26">Rzeszów Podkarpacka / Matuszczaka. 03/04</option>
+                <option value="val27" id="valid27">Rzeszów Podkarpacka Politechnika 01/02</option>
+                <option value="val28" id="valid28">Rzeszów Dąbrowskiego Boh.Westerplatte 08/ Wydział Muzyki 07</option>
+                <option value="val29" id="valid29">Rzeszów Dąbrowskiego KW Policji 04 / Dąbrowskiego pawilony 03</option>
+                <option value="val30" id="valid30">Rzeszów Dąbrowskiego park 02 / Dąbrowskiego dworek 01</option>
+                <option value="val37" id="valid37">RZESZÓW, D.A. GROTTGERA</option>
+                <option value="val31" id="valid31">Rzeszów Lisa - Kuli rondo</option>
+                <option value="val32" id="valid32">Rzeszów Cieplińskiego park 02 / Cieplińskiego 01</option>
+                <option value="val33" id="valid33">Rzeszów Marszałkowska 02 / Marszałkowska osiedle 01</option>
+                <option value="val34" id="valid34">Rzeszów Lubelska szpital 01/ Lubelska szpital 02</option>
+                <option value="val35" id="valid35">Rzeszów Wyzwolenia/ Lubelska 02</option>
+                <option value="val36" id="valid36">Rzeszów Wyzwolenia Word 04/Wyzwolenia / Warszawska 01</option>
+                <option value="val47" id="valid47">Rzeszów Piłsudskiego CH Ameryka</option>
+                <option value="val48" id="valid48">Rzeszów Piłsudskiego</option>
+                <option value="val49" id="valid49">Rzeszów Rejtana</option>
+                <option value="val50" id="valid50">Rzeszów Rejtana URz</option>
+                <option value="val51" id="valid51">Rzeszów E.Leclerc</option>
+                
+
+            </select>
+            <button  class="open-window"><span data-modal-target="#modal">Legenda</span></button>
+
+<div class="modal window" id="modal">
+    <div class="modal-header">
+        <div class="title">Legenda</div>
+        <button data-close-button class="close-button">X</button>
+    </div>
+    <div class="modal-body">
+        <bold><span id="modal223">223:</span></bold><br>
+        G - nie kursuje w okresie wakacji i ferii<br>
+        F - kursuje w okresie wakacji i ferii szkolnych<br>
+        m - nie kursuje w dniach 24 i 31 XII<br>
+        ś - nie kursuje w święta ustawowo wolne <br>
+        <bold><span id="modal223">210:</span></bold><br>
+        kursuje od poniedziałku do piątku oprócz świąt
+        <br>24 XII i 31 XII nie kursują ostatnie dwa kursy<br><hr><br>
+        Ostatnia aktualizacja 19.12.2021
+        </div>
+        </div>
+        
+            <div class="text">
+    
+            
+            <h1 id="bus23p">
+                
+            </h1>
+            <h2 id='bus23pr'></h2>
+            <h1 id="bus223"></h1>
+            <h2 id='bus223r'></h2>
+            <h1 id="bus210"></h1>
+            <h2 id='bus210r'></h2>
+            <h1 id='bus228'></h1>
+            <h2 id='bus228r'></h1>
+            <div id="data">
+            <div id="elTime"></div>
+            <div id="elDate"></div>
+            </div>
+            
+
+
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <div class="lottie">
+<lottie-player src="https://assets4.lottiefiles.com/datafiles/MaKSoctsyXXTCDOpDktJYEcS3ws5SI6CLDo7iyMc/ex-splash.json"  background="transparent"  speed="1"  loop  autoplay></lottie-player>
+</div>
+        </div>
+        
+        <!-- <img src="pexels-jannis-knorr-2933243.jpg"> -->
+    </div>
+</section>
+<div id="overlay"></div>
+<script src="index.js"></script>
+</body>
+</html>
